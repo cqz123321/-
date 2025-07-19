@@ -50,6 +50,9 @@
 
    * 单帧导出：点击 **Generate Matrix**，会在下方文本框输出 C 风格数组
    * 多帧导出：点击 **Export All Frames**，把所有动图帧都导出来，方便做动画！
+  
+4. **复制矩阵**
+   *  打开 `FrameData.cpp` 并复制第四步 生成的frame data 复制进去
 
 ---
 
@@ -72,18 +75,13 @@
 
 ### 使用方法
 
-1. 将 `generate_frames.py` 放到与所有 `frameX` 数组定义同一目录下。
-2. 修改脚本开头的 `frame_count`，设为你的总帧数（比如 225）：
+1. 修改脚本开头的 `frame_count`，设为你的总帧数（比如 225）：
 
    ```python
    frame_count = 225  # 修改这里为你想要的帧数
    ```
-3. 在终端运行：
 
-   ```bash
-   python generate_frames.py > FrameArray.h
-   ```
-4. 打开生成的 `FrameData.cpp`，会看到类似：
+2. 打开生成的 `FrameData.cpp`，会看到类似：
 
    ```cpp
    // 将所有帧的首地址放进数组中
@@ -93,7 +91,7 @@
 
    const int numFrames = 225;
    ```
-5. 烧录进arduino 即可直接循环播放。
+3. 烧录进arduino 即可直接循环播放。
 
 ---
 
